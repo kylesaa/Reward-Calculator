@@ -1,7 +1,7 @@
 # Reward calculator
 A microservice applicaition that calculate rewards.
 
-#API Examples
+# API Examples
 
 localhost:8080/reward/2?start=2022-07-01T16:12:12.12&end=2023-02-01T16:12:12.12
 
