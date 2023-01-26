@@ -31,6 +31,11 @@ localhost:8080/reward/2?start=2022-07-01T16:12:12.12&end=2023-02-01T16:12:12.12
 "totalReward": 810
 }
 
+
+
+if start and end time are not provided. The api will return the rewards of recent 3 months and set the time of now as calculated. Next time when request rewards of recent 3 months, calculated transactions won't be count in.
+
+
 localhost:8080/reward/2
 
 {
@@ -50,5 +55,3 @@ localhost:8080/reward/2
 ],
 "totalReward": 680
 }
-
-if start and end time are not provided. The api will return the rewards of recent 3 months and set the time of now as calculated. Next time when request rewards of recent 3 months, calculated transactions won't be count in.
