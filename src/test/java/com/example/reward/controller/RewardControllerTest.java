@@ -33,7 +33,7 @@ public class RewardControllerTest {
     public void testGetRewardWithTimeRange() throws Exception{
         when(rewardService.calculateRewards(any(),any(),any()))
                 .thenReturn(new RewardResult(new ArrayList<>(), 100));
-        mockMvc.perform(get("/reward/2?start=2022-07-01T16:12:12.12&end=2023-02-01T16:12:12.12"))
+        mockMvc.perform(get("/reward/customer/2?start=2022-07-01T16:12:12.12&end=2023-02-01T16:12:12.12"))
                 .andExpect(status().isOk());
     }
 
@@ -41,7 +41,7 @@ public class RewardControllerTest {
     public void testGetRewardWithoutTimeRange() throws Exception{
         when(rewardService.calculateRecentRewards(any()))
                 .thenReturn(new RewardResult(new ArrayList<>(), 100));
-        mockMvc.perform(get("/reward/2"))
+        mockMvc.perform(get("/reward/customer/2"))
                 .andExpect(status().isOk());
     }
 }

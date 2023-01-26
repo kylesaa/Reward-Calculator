@@ -21,12 +21,10 @@ public class RewardController {
         this.rewardService = rewardService;
     }
 
-    @GetMapping("/reward/{customer_id}")
-    public ResponseEntity<RewardResult> getRewards(@PathVariable String customer_id,
+    @GetMapping("/reward/customer/{customer_id}")
+    public ResponseEntity<RewardResult> getRewards(@PathVariable("customer_id") Long customerId,
                                                    @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime start,
                                                    @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime end){
-
-        Long customerId = Long.valueOf(customer_id);
 
         if((start == null && end!= null) || (start != null && end== null)){
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
