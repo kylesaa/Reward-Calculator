@@ -1,5 +1,5 @@
 # Reward calculator
-A microservice application that calculate rewards.
+A microservice application that calculates rewards.
 
 ## Description
 The project is created using Springboot.
@@ -34,7 +34,7 @@ localhost:8080/reward/customer/2?start=2022-07-01T16:12:12.12&end=2023-02-01T16:
 
 localhost:8080/reward/customer/2
 
-When start and end time are not provided, the api will return the rewards of recent 3 months and set the time of now as calculated. Next time when request rewards of recent 3 months, calculated transactions won't be count in.
+When start and end times are not provided, the api will return the rewards of recent 3 months and set the time of now as calculated. Next time when request rewards of recent 3 months, calculated transactions won't be counted in.
 
 ```json
 {
